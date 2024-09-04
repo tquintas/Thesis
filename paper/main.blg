@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: unsrt.bst
+Database file #1: bibthesis.bib
+Warning--empty author in oxford
+Warning--empty publisher in oxford
+Warning--empty year in oxford
+Warning--empty publisher in brisley
+Warning--empty publisher in battcock
+Warning--empty publisher in united1969principles
+You've used 53 entries,
+            1791 wiz_defined-function locations,
+            716 strings with 8903 characters,
+and the built_in function-call counts, 8784 in all, are:
+= -- 759
+> -- 307
+< -- 0
++ -- 131
+- -- 78
+* -- 352
+:= -- 1448
+add.period$ -- 173
+call.type$ -- 53
+change.case$ -- 26
+chr.to.int$ -- 0
+cite$ -- 59
+duplicate$ -- 513
+empty$ -- 1041
+format.name$ -- 78
+if$ -- 2050
+int.to.chr$ -- 0
+int.to.str$ -- 53
+missing$ -- 73
+newline$ -- 271
+num.names$ -- 64
+pop$ -- 274
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 118
+stack$ -- 0
+substring$ -- 111
+swap$ -- 50
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 6
+while$ -- 62
+width$ -- 55
+write$ -- 578
+(There were 6 warnings)
