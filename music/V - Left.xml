@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<gallery name="V - Left" sampleType="4" soundfontURL="CMMV.sf2" soundfontInst="0"
-         defaultPiano="1" iteratorIsEnabled="0">
+<gallery name="V - Left" sampleType="5" soundfontURL="bitKlavierGrand_PianoBar_44k16b"
+         soundfontInst="0" defaultPiano="1" iteratorIsEnabled="0">
   <general globalGain="1.0" tempoMultiplier="1.0" tuningFund="440.0" invertSustain="0"
            noteOnSetsNoteOffVelocity="0" pedalGain="0.0"/>
   <equalizer bypassed="1" lowCutBypassed="0" peak1Bypassed="0" peak2Bypassed="0"
@@ -247,7 +247,7 @@
             blendronicGain="1.0" blendronicGain_inc="0.0" blendronicGain_time="0"
             blendronicGain_maxN="0" transpUsesTuning="0" transpUsesTuning_time="0"
             transpUsesTuning_maxN="0" transposition_time="0" transposition_maxN="0"
-            directUseGlobalSoundSet="0" directUseGlobalSoundSet_time="0"
+            directUseGlobalSoundSet="1" directUseGlobalSoundSet_time="0"
             directUseGlobalSoundSet_maxN="0" directSoundSet="bitKlavierGrand_PianoBar_44k16b"
             directSoundSet_time="0" directSoundSet_maxN="0" velocityMin="0"
             velocityMin_inc="0" velocityMin_time="0" velocityMin_maxN="0"
@@ -626,14 +626,14 @@
           targetStates3="0" targetStates4="0" targetStates5="0" targetStates6="0"
           targetStates7="0" targetStates8="0" targetStates9="0" targetStates10="0"
           targetStates11="0" targetStates12="0" targetStates13="0" targetStates14="0"
-          targetStates15="0" targetStates16="0" targetStates17="0" targetStates18="1"
-          targetStates19="1" targetStates20="1" targetStates21="1" inverted="0"
+          targetStates15="0" targetStates16="0" targetStates17="0" targetStates18="0"
+          targetStates19="0" targetStates20="1" targetStates21="1" inverted="0"
           harmonizerPreTranspose="0" harmonizerPostTranspose="0" endKeystrokes="0"
           ignoreSustain="0" ignoreNoteOff="0" sustainPedalKeys="0" toggleKey="0"
           sostenutoMode="0" asymmetricalWarp="1.0" symmetricalWarp="1.0"
-          scale="1.0" offset="0.0" velocityInvert="0" defSelected="1" osSelected="1">
-    <midiInputs/>
-    <midiInputIdentifiers/>
+          scale="1.0" offset="0.0" velocityInvert="0" defSelected="0" osSelected="1">
+    <midiInputs midiInput0="Arturia KeyStep 32"/>
+    <midiInputIdentifiers midiInputIdentifier0="-50060843"/>
     <harmonizer>
       <t0 i0="0"/>
       <t1 i0="1"/>
@@ -913,19 +913,19 @@
       <item name="Tuning12" type="3" Id="1" piano="-1" active="1" X="173.5"
             Y="117.5" W="55.0" H="119.0"/>
       <connections>
-        <item name="Direct11" type="0" Id="1" piano="-1" active="1" X="173.0"
+        <item name="Direct11" type="0" Id="1" piano="-1" active="1" X="172.0"
               Y="251.0" W="132.0" H="62.0"/>
       </connections>
     </item>
     <item>
-      <item name="Direct11" type="0" Id="1" piano="-1" active="1" X="173.0"
+      <item name="Direct11" type="0" Id="1" piano="-1" active="1" X="172.0"
             Y="251.0" W="132.0" H="62.0"/>
     </item>
     <item>
-      <item name="Keymap11" type="5" Id="1" piano="-1" active="1" X="382.5"
+      <item name="Keymap11" type="5" Id="1" piano="-1" active="1" X="381.5"
             Y="360.5" W="109.0" H="73.0"/>
       <connections>
-        <item name="Direct11" type="0" Id="1" piano="-1" active="1" X="173.0"
+        <item name="Direct11" type="0" Id="1" piano="-1" active="1" X="172.0"
               Y="251.0" W="132.0" H="62.0"/>
         <item name="" type="1" Id="1" piano="0" active="1" X="370.0" Y="249.0"
               W="132.0" H="62.0"/>

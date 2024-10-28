@@ -636,9 +636,9 @@
           harmonizerPostTranspose="0" endKeystrokes="0" ignoreSustain="0"
           ignoreNoteOff="0" sustainPedalKeys="0" toggleKey="0" sostenutoMode="0"
           asymmetricalWarp="1.0" symmetricalWarp="1.0" scale="1.0" offset="0.0"
-          velocityInvert="0" defSelected="1" osSelected="1">
-    <midiInputs/>
-    <midiInputIdentifiers/>
+          velocityInvert="0" defSelected="0" osSelected="1">
+    <midiInputs midiInput0="WebAppMIDI"/>
+    <midiInputIdentifiers midiInputIdentifier0="-1859043071"/>
     <harmonizer>
       <t0 i0="0"/>
       <t1 i0="1"/>

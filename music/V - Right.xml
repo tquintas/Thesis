@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<gallery name="V - Right" sampleType="5" soundfontURL="SSine2" soundfontInst="0"
-         defaultPiano="1" iteratorIsEnabled="0">
+<gallery name="V - Right" sampleType="5" soundfontURL="bitKlavierGrand_PianoBar_44k16b"
+         soundfontInst="0" defaultPiano="1" iteratorIsEnabled="0">
   <general globalGain="1.0" tempoMultiplier="1.0" tuningFund="440.0" invertSustain="0"
            noteOnSetsNoteOffVelocity="0" pedalGain="0.0"/>
   <equalizer bypassed="1" lowCutBypassed="0" peak1Bypassed="0" peak2Bypassed="0"
@@ -226,7 +226,7 @@
             blendronicGain="1.0" blendronicGain_inc="0.0" blendronicGain_time="0"
             blendronicGain_maxN="0" transpUsesTuning="0" transpUsesTuning_time="0"
             transpUsesTuning_maxN="0" transposition_time="0" transposition_maxN="0"
-            directUseGlobalSoundSet="0" directUseGlobalSoundSet_time="0"
+            directUseGlobalSoundSet="1" directUseGlobalSoundSet_time="0"
             directUseGlobalSoundSet_maxN="0" directSoundSet="bitKlavierGrand_PianoBar_44k16b"
             directSoundSet_time="0" directSoundSet_maxN="0" velocityMin="0"
             velocityMin_inc="0" velocityMin_time="0" velocityMin_maxN="0"
@@ -368,9 +368,9 @@
             accentMultipliers_time="0" accentMultipliers_maxN="0" accentMultipliersStates_time="0"
             accentMultipliersStates_maxN="0" transpOffsets_time="0" transpOffsets_maxN="0"
             transpOffsetsStates_time="0" transpOffsetsStates_maxN="0" ADSRs_time="0"
-            ADSRs_maxN="0" synchronicUseGlobalSoundSet="1" synchronicUseGlobalSoundSet_time="0"
-            synchronicUseGlobalSoundSet_maxN="0" synchronicSoundSet="" synchronicSoundSet_time="0"
-            synchronicSoundSet_maxN="0">
+            ADSRs_maxN="0" synchronicUseGlobalSoundSet="0" synchronicUseGlobalSoundSet_time="0"
+            synchronicUseGlobalSoundSet_maxN="0" synchronicSoundSet="SSine2"
+            synchronicSoundSet_time="0" synchronicSoundSet_maxN="0">
       <beatMultipliers f0="0.6800000071525574" f1="0.699999988079071" f2="0.7200000286102295"
                        f3="0.6399999856948853" f4="0.7200000286102295" f5="0.8299999833106995"
                        f6="0.6800000071525574" f7="0.800000011920929" f8="0.8299999833106995"
@@ -608,9 +608,9 @@
           harmonizerPreTranspose="0" harmonizerPostTranspose="0" endKeystrokes="0"
           ignoreSustain="0" ignoreNoteOff="0" sustainPedalKeys="0" toggleKey="0"
           sostenutoMode="0" asymmetricalWarp="1.0" symmetricalWarp="1.0"
-          scale="1.0" offset="0.0" velocityInvert="0" defSelected="1" osSelected="1">
-    <midiInputs/>
-    <midiInputIdentifiers/>
+          scale="1.0" offset="0.0" velocityInvert="0" defSelected="0" osSelected="1">
+    <midiInputs midiInput0="Arturia KeyStep 32"/>
+    <midiInputIdentifiers midiInputIdentifier0="-50060843"/>
     <harmonizer>
       <t0 i0="0"/>
       <t1 i0="1"/>
@@ -891,19 +891,19 @@
             Y="134.5" W="55.0" H="119.0"/>
       <connections>
         <item name="Direct11" type="0" Id="1" piano="-1" active="1" X="241.0"
-              Y="260.0" W="132.0" H="62.0"/>
+              Y="259.0" W="132.0" H="62.0"/>
       </connections>
     </item>
     <item>
       <item name="Direct11" type="0" Id="1" piano="-1" active="1" X="241.0"
-            Y="260.0" W="132.0" H="62.0"/>
+            Y="259.0" W="132.0" H="62.0"/>
     </item>
     <item>
       <item name="Keymap11" type="5" Id="1" piano="-1" active="1" X="446.5"
             Y="385.5" W="109.0" H="73.0"/>
       <connections>
         <item name="Direct11" type="0" Id="1" piano="-1" active="1" X="241.0"
-              Y="260.0" W="132.0" H="62.0"/>
+              Y="259.0" W="132.0" H="62.0"/>
         <item name="" type="1" Id="1" piano="0" active="1" X="443.0" Y="258.0"
               W="132.0" H="62.0"/>
       </connections>

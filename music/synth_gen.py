@@ -354,8 +354,8 @@ def CreateRandomWavePercKeyboard(wave_class=_r.choice(list(waves.values())), nam
     v_sub = 16
     v_step = int(127/v_sub)
     num_of_notes = 7*12
-    start_dur = 12
-    end_dur = 2
+    start_dur = 2
+    end_dur = 1
     step_dur = (start_dur-end_dur)/num_of_notes
     cutoff_max = 12000
     cutoff_min = 200
@@ -379,8 +379,5 @@ def CreateRandomWavePercKeyboard(wave_class=_r.choice(list(waves.values())), nam
     t1 = _t.time()
     print(f"Done! It took {int(t1-t0)} seconds to run.")
 
-for i in range(1,3):
-    CreateRandomWavePercKeyboard(Sine, f"Sine{i}")
-    CreateRandomWavePercKeyboard(Cos, f"Cos{i}")
-    CreateRandomWavePercKeyboard(Tri, f"Tri{i}")
-    CreateRandomWavePercKeyboard(Fin, f"Fin{i}")
+for i in range(1,16):
+    CreateRandomWavePercKeyboard(name=f"Wave{i}")
