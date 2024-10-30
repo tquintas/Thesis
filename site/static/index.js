@@ -26,27 +26,6 @@ function stopNote(midi) {
 
 $(function() {
     oct = Math.floor(Math.random() * 7) - 3
-    /*
-    $(".bg-white").on("mousedown", function() {
-        const midi = Number(this.dataset.note);
-        sendNote(midi);
-    })
-
-    $(".bg-white").on("mouseup", function() {
-        const midi = Number(this.dataset.note);
-        stopNote(midi);
-    })
-
-    $(".bg-dark").on("mousedown", function() {
-        const midi = Number(this.dataset.note);
-        sendNote(midi);
-    })
-
-    $(".bg-dark").on("mouseup", function() {
-        const midi = Number(this.dataset.note);
-        stopNote(midi);
-    })
-    */
     $(".bg-white").on("touchstart", function(event) {
         var touch = event.originalEvent.touches[0];
         var y = touch.clientY;
@@ -63,23 +42,4 @@ $(function() {
         const midi = Number(this.dataset.note);
         sendNote(midi, vel);
     })
-    /*
-    $(".bg-white").on("touchend", function() {
-        const midi = Number(this.dataset.note);
-        stopNote(midi);
-    })
-    $(".bg-white").on("touchcancel", function() {
-        const midi = Number(this.dataset.note);
-        stopNote(midi);
-    })
-    
-    $(".bg-dark").on("touchend", function() {
-        const midi = Number(this.dataset.note);
-        stopNote(midi);
-    })
-    $(".bg-dark").on("touchcancel", function() {
-        const midi = Number(this.dataset.note);
-        stopNote(midi);
-    })
-    */
 })

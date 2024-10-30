@@ -16,6 +16,9 @@
 \usepackage{csquotes}
 \usepackage{url}
 \usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage[font=footnotesize]{caption}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -57,7 +60,23 @@
 \Section{Análise da Obra}
 \subfile{Chapters/obra.tex}
 
+\Section{Discussão e Considerações Finais}
+\subfile{Chapters/discussion.tex}
+
 \clearpage\phantomsection\addcontentsline{toc}{section}{Referências}
 \bibliography{bibthesis}
 \bibliographystyle{unsrt}
+
+\Section{Anexos}
+\section*{Anexo I - Código para a plataforma Web}
+\subfile{Chapters/code.tex}
+
+\section*{Anexo II - Partitura da Obra}
+Link para suporte auditivo da obra:
+
+{\footnotesize
+\url{https://drive.google.com/drive/folders/1Y0O9PNRTglBG0XmN7_A9dn7ZV3kqV4je?usp=share_link}}
+
+\includepdf[pages=-]{../music/obra.pdf}
+
 \end{document}
