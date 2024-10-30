@@ -1,10 +1,14 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+\begin{minted}{python3}
 import wave as _w
 import random2 as _r
 import numpy as np
 from pathlib import Path as _p
 import time as _t
 
-bitSamples = "/Users/tiagoquintas/Documents/bitSamples"
+bitSamples = "/Users/.../Documents/bitSamples" # colocar a pasta dedicada aos samples para os instrumentos digitais
 
 def noteToFreq(note):
     a = 440
@@ -170,112 +174,6 @@ waves = {
     "spk":Spike
 }
 
-def CreateSineFMKeyboard():
-    c1 = 24
-    v_sub = 8
-    v_step = int(127/v_sub)
-    start_dur = 64
-    sine = Sine()
-    tri = Tri(0.4)
-    tri.set_adsr(0,0,1,0)
-    tri_rad = 3
-    cutoff_max = 5000
-    cutoff_min = 800
-    cutoff_step = (cutoff_max-cutoff_min)/v_sub
-    for i in range(8):
-        midi_note = c1 + 12*i
-        fm_note = c1 + 12*(i-1)
-        dur = start_dur/(2**i)
-        sine.set_adsr(r=dur*950)
-        for v in range(v_sub):
-            vel = v_step*(v+1)
-            note = LP(sine.FM(midi_note, vel, dur, tri, fm_note, vel, tri_rad), cutoff_min+cutoff_step*v)
-            name = f"{bitSamples}/SineFM/C{i+1}v{v+1}"
-            Wave.save(note, name)
-            print(f"Saved {name}.wav!")
-
-def CreateTriFMKeyboard():
-    c1 = 24
-    v_sub = 8
-    v_step = int(127/v_sub)
-    start_dur = 64
-    tri = Tri(0.7)
-    square = Square(0.2)
-    square.set_adsr(0,0,1,0)
-    square_rad = 2
-    cutoff_max = 6000
-    cutoff_min = 800
-    cutoff_step = (cutoff_max-cutoff_min)/v_sub
-    for i in range(8):
-        midi_note = c1 + 12*i
-        fm_note = midi_note + 7
-        dur = start_dur/(2**i)
-        tri.set_adsr(r=dur*950)
-        for v in range(v_sub):
-            vel = v_step*(v+1)
-            note = LP(tri.FM(midi_note, vel, dur, square, fm_note, vel, square_rad), cutoff_min+cutoff_step*v)
-            name = f"{bitSamples}/TriFM/C{i+1}v{v+1}"
-            Wave.save(note, name)
-            print(f"Saved {name}.wav!")
-
-def CreateFinFMKeyboard():
-    c1 = 24
-    v_sub = 8
-    v_step = int(127/v_sub)
-    start_dur = 64
-    fin = Fin(0.41)
-    saw = Saw(0.22)
-    saw.set_adsr(0,0,1,0)
-    saw_rad = 3
-    spike = Spike(0.83)
-    spike.set_adsr(0,0,1,0)
-    spike_rad = 0.08
-    cutoff_max = 8000
-    cutoff_min = 800
-    cutoff_step = (cutoff_max-cutoff_min)/v_sub
-    for i in range(8):
-        midi_note = c1 + 12*i
-        fm_note = midi_note + 7
-        am_note = c1 + 12*(i-1)
-        dur = start_dur/(2**i)
-        fin.set_adsr(s=0.3, r=dur*950)
-        for v in range(v_sub):
-            vel = v_step*(v+1)
-            buffer = spike.AM(fm_note, vel, dur, saw, am_note, vel, spike_rad)
-            note = LP(fin.FM_from_buffer(midi_note, vel, dur, buffer, saw_rad), cutoff_min+cutoff_step*v)
-            name = f"{bitSamples}/FinFM/C{i+1}v{v+1}"
-            Wave.save(note, name)
-            print(f"Saved {name}.wav!")
-
-def CreateFinFM2Keyboard():
-    c1 = 24
-    v_sub = 8
-    v_step = int(127/v_sub)
-    start_dur = 64
-    fin = Fin(0.67)
-    saw = Saw(0.42)
-    saw.set_adsr(0,0,1,0)
-    saw_rad = 2.01
-    spike = Spike(0.73)
-    spike.set_adsr(0,0,1,0)
-    spike_rad = 0.11
-    cutoff_max = 2000
-    cutoff_min = 500
-    cutoff_step = (cutoff_max-cutoff_min)/v_sub
-    for i in range(8):
-        midi_note = c1 + 12*i
-        fm_note = midi_note + 7
-        am_note = c1 + 12*(i-1)
-        dur = start_dur/(2**i)
-        fin.set_adsr(s=0.3, r=dur*950)
-        for v in range(v_sub):
-            vel = v_step*(v+1)
-            buffer = spike.AM(fm_note, vel, dur, saw, am_note, vel, spike_rad)
-            note = LP(fin.FM_from_buffer(midi_note, vel, dur, buffer, saw_rad), cutoff_min+cutoff_step*v)
-            name = f"{bitSamples}/FinFM2/C{i+1}v{v+1}"
-            Wave.save(note, name)
-            print(f"Saved {name}.wav!")
-
 def CreateTriBellAMKeyboard():
     heads = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
     c1 = 24
@@ -393,3 +291,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+\end{minted}
+
+\end{document}
